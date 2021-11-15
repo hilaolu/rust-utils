@@ -21,7 +21,9 @@ steps:
   settings:
     api_key:
       from_secret: github_token
-    files: /release/rust_utils.tar.xz
+    files: 
+      - /release/rust_utils.tar.xz
+      - /release/bin/*
   volumes:
   - name: release 
     path: /release 
