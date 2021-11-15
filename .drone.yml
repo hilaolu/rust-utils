@@ -6,15 +6,16 @@ steps:
 - name: build
   image: rust:latest
   commands:
-  - cargo install du-dust --root /release
+  - cargo install du-dust 
+    du-dust ripgrep fd-find 
+    exa bat procs hyperfine 
+    choose tealdeer sd 
+    ytop bandwhich grex 
+    --root /release
   - cd /release/bin && tar cJvf /release/rust_utils.tar.xz *
   volumes:
   - name: release 
     path: /release 
-#    du-dust ripgrep fd-find 
-#    exa bat procs hyperfine 
-#    choose tealdeer sd 
-#    ytop bandwhich grex 
 
 - name: publish
   image: plugins/github-release
