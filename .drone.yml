@@ -7,6 +7,9 @@ steps:
   image: rust:latest
   commands:
   - cargo install du-dust 
+  volumes:
+  - name: cargo 
+    path: /usr/local/cargo 
 #    du-dust ripgrep fd-find 
 #    exa bat procs hyperfine 
 #    choose tealdeer sd 
@@ -17,9 +20,13 @@ steps:
   settings:
     api_key:
       from_secret: github_token
-    files: /usr/local/cargo/*
+  volumes:
+  - name: cargo 
+    path: /usr/local/cargo 
 #  when:
 #    event: tag
     
-
+volumes:
+- name: cargo
+  temp: {}
   
