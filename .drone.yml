@@ -12,7 +12,6 @@ steps:
 #    choose tealdeer sd 
 #    ytop bandwhich grex 
 
-steps:
 - name: publish
   image: plugins/github-release
   settings:
