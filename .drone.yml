@@ -28,7 +28,7 @@ steps:
   volumes:
   - name: release 
     path: /release 
-  trigger:
+  when:
     event: tag
     
 volumes:
