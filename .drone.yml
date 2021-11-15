@@ -7,6 +7,7 @@ steps:
   image: rust:latest
   commands:
   - cargo install du-dust --root /release
+  - tar cJvf /release/rust_utils.tar.xz /release/bin/*
   volumes:
   - name: release 
     path: /release 
@@ -20,7 +21,7 @@ steps:
   settings:
     api_key:
       from_secret: github_token
-    files: /release/bin/*
+    files: /release/rust_utils.tar.xz /release/bin/* 
   volumes:
   - name: release 
     path: /release 
