@@ -6,7 +6,7 @@ steps:
 - name: build
   image: rust:latest
   commands:
-  - cargo install du-dust --path /release
+  - cargo install du-dust --root /release
   volumes:
   - name: release 
     path: /release 
