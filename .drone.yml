@@ -12,7 +12,7 @@ steps:
     choose tealdeer sd 
     ytop bandwhich grex 
     --root /release
-  - cd /release/bin && tar cJvf /release/rust_utils.tar.xz *
+  - cd /release/bin && tar cJvf /release/rust-utils.tar.xz *
   volumes:
   - name: release 
     path: /release 
@@ -23,7 +23,7 @@ steps:
     api_key:
       from_secret: github_token
     files: 
-      - /release/rust_utils.tar.xz
+      - /release/rust-utils.tar.xz
       - /release/bin/*
   volumes:
   - name: release 
