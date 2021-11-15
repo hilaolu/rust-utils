@@ -23,8 +23,8 @@ steps:
   volumes:
   - name: cargo 
     path: /usr/local/cargo 
-#  when:
-#    event: tag
+  when:
+    event: tag
     
 volumes:
 - name: cargo
