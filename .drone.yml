@@ -6,9 +6,9 @@ steps:
 - name: test
   image: rust:latest
   commands:
-  - cargo install \ 
-"du-dust" "ripgrep" "fd-find" \
-"exa" "bat" "procs" "hyperfine" \
-"choose" "tealdeer" "sd" \
-"ytop" "bandwhich" "grex" 
+  - cargo install  
+    du-dust ripgrep fd-find 
+    exa bat procs hyperfine 
+    choose tealdeer sd 
+    ytop bandwhich grex 
   
