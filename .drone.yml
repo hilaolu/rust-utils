@@ -20,6 +20,7 @@ steps:
   settings:
     api_key:
       from_secret: github_token
+    files: /usr/local/cargo/*
   volumes:
   - name: cargo 
     path: /usr/local/cargo 
