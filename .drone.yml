@@ -3,12 +3,24 @@ type: docker
 name: default
 
 steps:
-- name: test
+- name: build
   image: rust:latest
   commands:
-  - cargo install  
-    du-dust ripgrep fd-find 
-    exa bat procs hyperfine 
-    choose tealdeer sd 
-    ytop bandwhich grex 
+  - cargo install du-dust 
+#    du-dust ripgrep fd-find 
+#    exa bat procs hyperfine 
+#    choose tealdeer sd 
+#    ytop bandwhich grex 
+
+steps:
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_token
+    files: /usr/local/cargo/*
+#  when:
+#    event: tag
+    
+
   
