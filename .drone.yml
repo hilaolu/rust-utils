@@ -6,10 +6,10 @@ steps:
 - name: build
   image: rust:latest
   commands:
-  - cargo install du-dust 
+  - cargo install du-dust --path /release
   volumes:
-  - name: cargo 
-    path: /usr/local/cargo 
+  - name: release 
+    path: /release 
 #    du-dust ripgrep fd-find 
 #    exa bat procs hyperfine 
 #    choose tealdeer sd 
@@ -20,14 +20,14 @@ steps:
   settings:
     api_key:
       from_secret: github_token
-    files: /usr/local/cargo/bin/*
+    files: /release/*
   volumes:
-  - name: cargo 
-    path: /usr/local/cargo 
+  - name: release 
+    path: /release 
   when:
     event: tag
     
 volumes:
-- name: cargo
+- name: release
   temp: {}
   
