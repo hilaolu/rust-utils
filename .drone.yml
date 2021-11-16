@@ -10,7 +10,7 @@ steps:
     du-dust ripgrep fd-find 
     exa bat procs hyperfine 
     choose tealdeer sd 
-    ytop bandwhich grex 
+    bandwhich grex 
     --root /release
   - cd /release/bin && tar cvf /release/rust-utils.tar.xz *
   - cd /release/bin && tar cvf /release/rust-utils.tar.gz *
