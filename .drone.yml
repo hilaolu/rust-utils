@@ -11,8 +11,6 @@ steps:
   - apt update && apt install curl -y 
   - curl -L https://github.com/soywod/himalaya/releases/latest/download/himalaya-linux.tar.gz -o himalaya.tar.gz
   - tar -xzf himalaya.tar.gz -C /release/bin
-  - cd /release/bin && tar cvf /release/rust-utils.tar.xz *
-  - cd /release/bin && tar cvf /release/rust-utils.tar.gz *
   volumes:
   - name: release 
     path: /release 
