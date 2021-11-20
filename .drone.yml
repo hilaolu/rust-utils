@@ -3,6 +3,20 @@ type: docker
 name: default
 
 steps:
+
+- name: get himalaya
+  image: debian:bullseye-slim
+  commands:
+  - mkdir -p /release/bin
+  - curl https://github.com/soywod/himalaya/releases/download/v0.5.1/himalaya-linux.tar.gz -o himalaya.tar.gz
+  - tar -xzf himalaya.tar.gz -C /release/bin
+  - cd /release/bin && tar cvf /release/rust-utils.tar.xz *
+  - cd /release/bin && tar cvf /release/rust-utils.tar.gz *
+  volumes:
+  - name: release 
+    path: /release 
+
+
 - name: build
   image: rust:latest
   commands:
@@ -12,8 +26,6 @@ steps:
     choose tealdeer sd 
     bandwhich grex 
     --root /release
-  - curl https://github.com/soywod/himalaya/releases/download/v0.5.1/himalaya-linux.tar.gz -o himalaya.tar.gz
-  - tar -xzf himalaya.tar.gz -C /release/bin
   - cd /release/bin && tar cvf /release/rust-utils.tar.xz *
   - cd /release/bin && tar cvf /release/rust-utils.tar.gz *
   volumes:
