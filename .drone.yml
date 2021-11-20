@@ -25,7 +25,7 @@ steps:
     choose tealdeer sd 
     bandwhich grex 
     --root /release
-  - cd /release/bin && tar cvf /release/rust-utils.tar.xz *
+  - cd /release/bin && tar cJvf /release/rust-utils.tar.xz *
   - cd /release/bin && tar cvf /release/rust-utils.tar.gz *
   volumes:
   - name: release 
