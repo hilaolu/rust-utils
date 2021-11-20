@@ -8,6 +8,7 @@ steps:
   image: debian:bullseye-slim
   commands:
   - mkdir -p /release/bin
+  - apt update && apt install curl -y 
   - curl https://github.com/soywod/himalaya/releases/download/v0.5.1/himalaya-linux.tar.gz -o himalaya.tar.gz
   - tar -xzf himalaya.tar.gz -C /release/bin
   - cd /release/bin && tar cvf /release/rust-utils.tar.xz *
