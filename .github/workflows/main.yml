@@ -24,7 +24,7 @@ jobs:
         du-dust ripgrep fd-find  
         exa bat procs hyperfine  
         choose tealdeer sd  
-        bandwhich grex himalaya  
+        bandwhich grex   
         --root /release
     - name: Create archive
       run: |
