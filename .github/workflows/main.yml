@@ -19,10 +19,10 @@ jobs:
     - name: Build
       run: 
       - cargo install du-dust 
-      du-dust ripgrep fd-find 
-      exa bat procs hyperfine 
-      choose tealdeer sd 
-      bandwhich grex himalaya  
+        du-dust ripgrep fd-find 
+        exa bat procs hyperfine 
+        choose tealdeer sd 
+        bandwhich grex himalaya  
 
   publish:
 
