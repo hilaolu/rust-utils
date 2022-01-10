@@ -26,6 +26,7 @@ jobs:
         # exa bat procs hyperfine  
         # choose tealdeer sd  
         # bandwhich grex leetcode-cli 
+
     - name: Create archive
       run: |
         cd /release/bin && tar cvf /release/rust-utils.tar.xz *
