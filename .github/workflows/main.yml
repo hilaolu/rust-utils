@@ -21,11 +21,11 @@ jobs:
     - name: Build
       run: > 
         cargo install du-dust  
+        --root /release
         # du-dust ripgrep fd-find  
         # exa bat procs hyperfine  
         # choose tealdeer sd  
         # bandwhich grex   
-        --root /release
     - name: Create archive
       run: |
         cd /release/bin && tar cvf /release/rust-utils.tar.xz *
