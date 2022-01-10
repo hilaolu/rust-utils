@@ -21,10 +21,10 @@ jobs:
     - name: Build
       run: > 
         cargo install du-dust  
-        du-dust ripgrep fd-find  
-        exa bat procs hyperfine  
-        choose tealdeer sd  
-        bandwhich grex   
+        # du-dust ripgrep fd-find  
+        # exa bat procs hyperfine  
+        # choose tealdeer sd  
+        # bandwhich grex   
         --root /release
     - name: Create archive
       run: |
