@@ -18,12 +18,12 @@ jobs:
     - name: mkdir
       run: mkdir /release
     - name: Build
-      run: > 
-        cargo install du-dust  
-        du-dust ripgrep fd-find  
-        exa bat procs hyperfine  
-        choose tealdeer sd  
-        bandwhich grex leetcode-cli 
+      run: | 
+        cargo install du-dust \ 
+        du-dust ripgrep fd-find \ 
+        exa bat procs hyperfine \ 
+        choose tealdeer sd \ 
+        bandwhich grex \ 
         --root /release
 
     - name: Create archive
