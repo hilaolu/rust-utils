@@ -16,22 +16,22 @@ jobs:
       image: rust:latest
     steps:
     - name: mkdir
-      run: mkdir /release
-    - name: Build
-      run: > 
-        cargo install  
-        du-dust ripgrep fd-find  
-        exa bat procs hyperfine  
-        choose tealdeer sd  
-        bandwhich grex  
-        --root /release
+      run: mkdir /release/bin -p
+    # - name: Build
+    #   run: > 
+    #     cargo install  
+    #     du-dust ripgrep fd-find  
+    #     exa bat procs hyperfine  
+    #     choose tealdeer sd  
+    #     bandwhich grex  
+    #     --root /release
     
     
 
-    - name: Create archive
-      run: |
-        cd /release/bin && tar cvf /release/rust-utils.tar.xz *
-        cd /release/bin && tar cvf /release/rust-utils.tar.gz *
+    # - name: Create archive
+    #   run: |
+    #     cd /release/bin && tar cvf /release/rust-utils.tar.xz *
+    #     cd /release/bin && tar cvf /release/rust-utils.tar.gz *
 
     - name: Leetcode CLI
       run: |
